@@ -1,7 +1,9 @@
 package de.berlin.beuth;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Workspace {
 
@@ -23,6 +25,11 @@ public class Workspace {
         );
 
         //todo: 1. Find all transactions in the year 2011 and sort them by value (small to high).
+        List<Transaction> trans1 = transactions.stream()
+                .filter(transaction -> transaction.getYear() == 2011)
+                .sorted(Comparator.comparingInt(transaction -> transaction.getValue()))
+                .collect(Collectors.toList());
+        trans1.forEach(System.out::println);
 
         //todo: 2. What are all the unique cities where the traders work?
 
