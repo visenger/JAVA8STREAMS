@@ -22,7 +22,7 @@ public class Trader {
 
     @Override
     public String toString() {
-        return "Traider{" +
+        return "Trader{" +
                 "name='" + this.name + '\'' +
                 ", city='" + this.city + '\'' +
                 '}';

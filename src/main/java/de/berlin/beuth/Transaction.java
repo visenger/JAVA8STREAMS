@@ -30,7 +30,7 @@ public class Transaction {
     @Override
     public String toString() {
         return "Transaction{" +
-                "traider=" + trader +
+                "trader=" + trader +
                 ", year=" + year +
                 ", value=" + value +
                 '}';
